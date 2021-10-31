@@ -6,7 +6,6 @@ accessed through this class
 var http = require('http');
 var url = require('url');
 var StringDecoder = require('string_decoder').StringDecoder;
-var userHandler = require('./lib/user_handler');
 var routeHandler = require('./lib/book_handler');
 var helper = require('./lib/helper');
 var config = require('./lib/config');
@@ -66,7 +65,7 @@ var server = http.createServer(function(req, res) {
 
 //start the server
 server.listen(config.port, function() {
-    console.log("Server started on PORT " + config.port + " in " + config.envName + " mode");
+    console.log("Server started on Port: " + config.port + " in " + config.envName + " mode");
 })
 
 //router implementation
